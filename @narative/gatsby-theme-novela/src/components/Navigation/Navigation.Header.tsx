@@ -39,8 +39,8 @@ const DarkModeToggle: React.FC<{}> = () => {
       isDark={isDark}
       onClick={toggleColorMode}
       data-a11y="false"
-      aria-label={isDark ? "Activate light mode" : "Activate dark mode"}
-      title={isDark ? "Activate light mode" : "Activate dark mode"}
+      aria-label={isDark ? "日间模式" : "夜间模式"}
+      title={isDark ? "日间模式" : "夜间模式"}
     >
       <MoonOrSun isDark={isDark} />
       <MoonMask isDark={isDark} />
@@ -70,12 +70,12 @@ const SharePageButton: React.FC<{}> = () => {
       isDark={isDark}
       onClick={copyToClipboardOnClick}
       data-a11y="false"
-      aria-label="Copy URL to clipboard"
-      title="Copy URL to clipboard"
+      aria-label="复制网址"
+      title="复制网址"
     >
       <Icons.Link fill={fill} />
       <ToolTip isDark={isDark} hasCopied={hasCopied}>
-        Copied
+        已复制
       </ToolTip>
     </IconWrapper>
   );
@@ -112,8 +112,8 @@ const NavigationHeader: React.FC<{}> = () => {
         <LogoLink
           to={rootPath || basePath}
           data-a11y="false"
-          title="Navigate back to the homepage"
-          aria-label="Navigate back to the homepage"
+          title="返回首页"
+          aria-label="返回首页"
           back={showBackArrow ? "true" : "false"}
         >
           {showBackArrow && (
@@ -122,14 +122,14 @@ const NavigationHeader: React.FC<{}> = () => {
             </BackArrowIconContainer>
           )}
           <Logo fill={fill} />
-          <Hidden>Navigate back to the homepage</Hidden>
+          <Hidden>返回首页</Hidden>
         </LogoLink>
         <NavControls>
           {showBackArrow ? (
             <button
               onClick={() => navigate(previousPath)}
-              title="Navigate back to the homepage"
-              aria-label="Navigate back to the homepage"
+              title="返回首页"
+              aria-label="返回首页"
             >
               <Icons.Ex fill={fill} />
             </button>
@@ -225,6 +225,7 @@ const ToolTip = styled.div<{ isDark: boolean; hasCopied: boolean }>`
   background: ${p => (p.isDark ? "#000" : "rgba(0,0,0,0.1)")};
   color: ${p => (p.isDark ? "#fff" : "#000")};
   border-radius: 5px;
+  width: 80px;
   font-size: 14px;
   top: -35px;
   opacity: ${p => (p.hasCopied ? 1 : 0)};

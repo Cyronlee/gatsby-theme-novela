@@ -51,7 +51,7 @@ const DarkModeToggle: React.FC<{}> = () => {
   return (
     <IconWrapper
       onClick={toggleColorMode}
-      aria-label="Toggle dark and light mode"
+      aria-label="切换主题"
     >
       <MoonOrSun isDark={isDark} />
       <MoonMask isDark={isDark} />
@@ -81,11 +81,11 @@ const SharePageButton: React.FC<{}> = () => {
     <IconWrapper
       onClick={copyToClipboardOnClick}
       data-a11y="false"
-      aria-label="Copy URL to clipboard"
+      aria-label="复制网址"
     >
       <Icon />
       <ToolTip isDark={isDark} hasCopied={hasCopied}>
-        Copied
+        已复制
       </ToolTip>
     </IconWrapper>
   );
@@ -114,6 +114,7 @@ const ToolTip = styled.div<{ isDark: boolean; hasCopied: boolean }>`
   background: ${p => (p.isDark ? "#000" : "rgba(0,0,0,0.1)")};
   color: ${p => (p.isDark ? "#fff" : "#000")};
   border-radius: 5px;
+  width: 80px;
   font-size: 14px;
   top: -35px;
   opacity: ${p => (p.hasCopied ? 1 : 0)};

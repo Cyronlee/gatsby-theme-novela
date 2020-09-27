@@ -23,7 +23,7 @@ interface MenuFloatState {
  * Values we get to be able to ensure the positionting context are correct!
  * Padding is derviced from the CSS value in Editor
  */
-const MENU_WIDTH: number = 225;
+const MENU_WIDTH: number = 46;
 const MENU_HEIGHT: number = 46;
 
 const ArticleShare: React.FC<{}> = () => {
@@ -168,15 +168,15 @@ const ArticleShare: React.FC<{}> = () => {
       }}
       isDark={isDark}
     >
-      <MenuText>Share: </MenuText>
+      {/*<MenuText>分享</MenuText>
       <ReferralLink disabled={!canTweet} share={share.twitter}>
         <Icons.Twitter width="18px" height="15px" />
       </ReferralLink>
       <ReferralLink disabled={false} share={share.linkedin}>
         <Icons.LinkedIn width="16px" height="16px" />
       </ReferralLink>
-      <MenuDivider />
-      <MenuButton onClick={handleCopyClick} aria-label="Copy selected text">
+      <MenuDivider />*/}
+      <MenuButton onClick={handleCopyClick} aria-label="复制">
         <Icons.Copy />
       </MenuButton>
     </MenuFloat>
@@ -305,7 +305,6 @@ const MenuShare = styled.a<{ disabled: boolean }>`
 
 const MenuButton = styled.button`
   display: inline-block;
-  padding: 16px 11px;
 `;
 
 const MenuDivider = styled.div`
