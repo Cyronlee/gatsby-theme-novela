@@ -12,7 +12,7 @@ const Bio: React.FC<IAuthor> = ({ author }) => {
         as={author.authorsPage ? Link : 'div'}
         to={author.slug}
         data-a11y="false"
-        aria-label="Author's bio"
+        aria-label="关于自己"
       >
         <BioAvatarInner>
           <RoundedImage src={author.avatar.medium} />

@@ -56,8 +56,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setGridLayout('tiles')}
             active={tilesIsActive}
             data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
+            title="瀑布流"
+            aria-label="瀑布流"
           >
             <Icons.Tiles />
           </GridButton>
@@ -65,8 +65,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setGridLayout('rows')}
             active={!tilesIsActive}
             data-a11y="false"
-            title="Show articles in Row grid"
-            aria-label="Show articles in Row grid"
+            title="列表展示"
+            aria-label="列表展示"
           >
             <Icons.Rows />
           </GridButton>

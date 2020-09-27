@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const siteMetadata = {
-  title: `Novela by Narative`,
+  title: `MUGEN`,
   name: `Narative`,
   siteUrl: `https://novela.narative.co`,
   description: `This is my description that will be used in the meta tags and important for search results`,
@@ -12,37 +12,6 @@ const siteMetadata = {
   social: [
     {
       url: `https://twitter.com/narative`,
-    },
-    {
-      url: `https://behance.com/narative`,
-    },
-    {
-      url: `https://github.com/narative`,
-    },
-    {
-      url: `https://instagram.com/narative.co`,
-    },
-    {
-      url: `https://www.linkedin.com/company/narative/`,
-    },
-    {
-      url: `https://dribbble.com/narativestudio`,
-    },
-    {
-      url: `https://youtube.com`,
-    },
-    {
-      name: 'stackoverflow',
-      url: `https://bit.ly/1x0885j`,
-    },
-    {
-      url: `https://digitalocean.com`,
-    },
-    {
-      url: `https://tripadvisor.com`,
-    },
-    {
-      url: `https://notion.so`,
     },
     {
       name: `mailto`,
@@ -60,7 +29,7 @@ const plugins = [
       rootPath: "/",
       basePath: "/",
       authorsPage: true,
-      mailchimp: true,
+      mailchimp: false,
       sources: {
         local: true,
         contentful: false,
@@ -70,8 +39,8 @@ const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Novela by Narative`,
-      short_name: `Novela`,
+      name: `MUGEN`,
+      short_name: `MUGEN`,
       start_url: `/`,
       background_color: `#fff`,
       theme_color: `#fff`,

@@ -25,7 +25,7 @@ module.exports.local = {
           secret
           title
           author
-          date(formatString: "MMMM Do, YYYY")
+          date(formatString: "YYYY年MM月DD日")
           dateForSEO: date
           timeToRead
           excerpt
@@ -109,7 +109,7 @@ module.exports.contentful = {
           title
           slug
           secret
-          date(formatString: "MMMM Do, YYYY")
+          date(formatString: "YYYY年MM月DD日")
           dateForSEO: date
           hero {
             full: fluid(maxWidth: 944, quality: 100) {
